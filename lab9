@@ -1,0 +1,56 @@
+/******************************************************************************
+
+                            Program Name: lab9.c
+                            
+                            Class: CS 3335
+                            Lab: 09
+                            Problem: 01
+
+*******************************************************************************/
+
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    
+    char str1[80], str2[80];
+
+    cout<<"Enter first string (at most 4 characters): ";
+    cin.getline(str1, 80);
+    
+    cout<<"Enter second string (at most 4 characters): ";
+    cin.getline(str2, 80);
+
+    int l = 0; //Hold length of first string
+    
+    int count = 0;
+    int count2 = 0;
+    
+    //Find length of first string.
+    for(l = 0; str1[l] != '\0'; l++);
+    //compute numerical value of strings
+    for(int i = 0; i < l; i++)
+    {
+        count += (int)str1[i];
+        count2 += (int)str2[i];
+    }
+    //compare
+    if(count == count2)
+    {
+        cout<<"Output: True";
+    }
+    else
+    {
+        cout<<"Output: False";    
+    }
+    
+    
+    
+    
+
+    return 0;
+}
